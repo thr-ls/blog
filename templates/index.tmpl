@@ -1,0 +1,56 @@
+
+
+{{define "title"}}
+  Blog
+{{end}}
+
+{{define "content"}}
+  <div class="row what">
+    <div class="offset-by-one ten columns">
+      <div class="row">
+        <div class="offset-by-two eight columns">
+<pre>
+  ╔═══════════════╗
+  ║     ( (       ║
+  ║      ) )      ║
+  ║   .______.    ║
+  ║   |      |]   ║
+  ║   |      | ]  ║
+  ║   '------'    ║
+  ╚═══════════════╝
+</pre>
+          <p>
+            fueled by coffee and curiosity.
+          </p>
+          <p>
+            <small><i>Perpetually under construction</i></small>
+          </p>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="offset-by-one ten columns">
+      {{$l := len .}}
+    
+      {{ if le $l 2  }}
+        <p style="text-align: center;">Sometimes I write and post whatever captures my interest. </p>
+      {{ end }}
+
+        {{range $i, $e := .}}
+          {{if not $e.IsPage}}
+            {{if even $i}}<div class="row">{{end}}
+              <span>
+                <small>
+                  <a href="/{{$e.Title | slug}}.html">{{$e.Title}} - {{formatDate $e.Written}}</a>
+                  <p></p>
+                </small>
+              </span>
+            {{if or (eq (inc $i) $l) (not (even $i))}}</div>{{end}}
+          {{end}}
+        {{end}}
+    </div>
+  </div>
+{{end}}

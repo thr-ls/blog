@@ -1,0 +1,24 @@
+{{define "title"}}
+  {{.Title}}
+{{end}}
+
+{{define "content"}}
+  <div class="row">
+    <div class="offset-by-one ten columns">
+      <h5>{{.Title}}</h5>
+      
+      {{if not .IsPage}}
+      <p><small>{{formatDate .Written}}</small></p>
+      {{end}}
+      
+       <p>
+        <em>
+          {{range .Tags}}
+            <a href="/tags/{{. | slug}}.html" title="Posts Tagged {{.}}">{{.}}</a>&nbsp;
+          {{end}}
+        </em>
+      </p>
+      {{.Content | html}}
+    </div>
+  </div>
+{{end}}

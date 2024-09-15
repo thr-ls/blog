@@ -1,0 +1,151 @@
+/* Light mode styles */
+body {
+    font-size: 1.8rem;
+    color: #222;
+    background-color: #fff;
+}
+
+a,
+a:active,
+a:focus,
+a:hover {
+    color: #888;
+    text-decoration: none;
+    border-bottom: 1px dotted #888;
+}
+
+a:active,
+a:focus,
+a:hover {
+    border-bottom: 1px solid #888;
+}
+
+header,
+footer {
+    color: #888;
+}
+
+blockquote {
+    border-left: 0.2rem solid #bbb;
+}
+
+/* pre {
+    background-color: #f5f2f0;
+} */
+
+code {
+    background-color: #f1f1f1;
+    border: 1px solid #e1e1e1;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #e0e0e0;
+        background-color: #121212;
+    }
+
+    a,
+    a:active,
+    a:focus,
+    a:hover {
+        color: #a7a7a7;
+        border-bottom: 1px dotted #a7a7a7;
+    }
+
+    a:active,
+    a:focus,
+    a:hover {
+        border-bottom: 1px solid #a7a7a7;
+    }
+
+    header,
+    footer {
+        color: #a7a7a7;
+    }
+
+    blockquote {
+        border-left: 0.2rem solid #666;
+    }
+
+    /* pre {
+        background-color: #1e1e1e;
+    } */
+
+    code {
+        background-color: #2b2b2b;
+        border: 1px solid #444;
+    }
+
+    /* Additional dark mode styles for elements from skeleton.min.css */
+    h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
+
+    .button,
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        color: #e0e0e0;
+        border-color: #666;
+    }
+
+    .button:focus,
+    .button:hover,
+    button:focus,
+    button:hover,
+    input[type="button"]:focus,
+    input[type="button"]:hover,
+    input[type="reset"]:focus,
+    input[type="reset"]:hover,
+    input[type="submit"]:focus,
+    input[type="submit"]:hover {
+        color: #fff;
+        border-color: #a7a7a7;
+    }
+
+    .button.button-primary,
+    button.button-primary,
+    input[type="button"].button-primary,
+    input[type="reset"].button-primary,
+    input[type="submit"].button-primary {
+        color: #121212;
+        background-color: #a7a7a7;
+        border-color: #a7a7a7;
+    }
+
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="url"],
+    select,
+    textarea {
+        background-color: #2b2b2b;
+        border: 1px solid #444;
+        color: #e0e0e0;
+    }
+
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="password"]:focus,
+    input[type="search"]:focus,
+    input[type="tel"]:focus,
+    input[type="text"]:focus,
+    input[type="url"]:focus,
+    select:focus,
+    textarea:focus {
+        border: 1px solid #a7a7a7;
+    }
+
+    td, th {
+        border-bottom: 1px solid #444;
+    }
+
+    hr {
+        border-top: 1px solid #444;
+    }
+}
