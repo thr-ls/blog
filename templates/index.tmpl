@@ -34,20 +34,42 @@
   <div class="row">
     <div class="offset-by-one ten columns">
       {{$l := len .}}
-    
+      {{$currentYear := ""}} <!-- Variable to track the current year -->
+
        <p style="text-align: center;">Sometimes I write and <s>post</s> whatever captures my interest. </p>
-        {{range $i, $e := .}}
-          {{if not $e.IsPage}}
-            {{if even $i}}<div class="row">{{end}}
-              <span>
-                <small>
-                  <a href="/{{$e.Title | slug}}.html">{{$e.Title}} - {{formatDate $e.Written}}</a>
-                  <p></p>
-                </small>
-              </span>
-            {{if or (eq (inc $i) $l) (not (even $i))}}</div>{{end}}
-          {{end}}
+       
+       {{range $i, $e := .}}
+          {{if not $e.IsPage}} <!-- Only process posts where .IsPage is false -->
+          
+              {{$postYear := formatYear $e.Written}} <!-- Extract the year from the date -->
+              
+              <!-- Check if the year is different from the current year -->
+              {{if ne $postYear $currentYear}}
+                <!-- Close the previous row if necessary -->
+                {{if not (eq $currentYear "")}}</div>{{end}}
+                
+                <!-- Start a new section for the new year -->
+                <span>{{$postYear}}</span>
+                {{$currentYear = $postYear}} <!-- Update the current year -->
+                <div class="row">
+              {{end}}
+
+              <!-- Display the post -->
+              {{if even $i}}<div class="row">{{end}}
+                <span>
+                  <small>
+                    <a href="/{{$e.Title | slug}}.html">{{$e.Title}} - {{formatDate $e.Written}}</a>
+                    <div style="margin-bottom: 5px;"></div> <!-- Reduce space between posts -->
+                  </small>
+                </span>
+              {{if or (eq (inc $i) $l) (not (even $i))}}</div>{{end}}
+
+          {{end}} <!-- End .IsPage check -->
         {{end}}
+        
+        <!-- Close the final row -->
+        {{if not (eq $currentYear "")}}</div>{{end}}
     </div>
-  </div>
+</div>
+
 {{end}}
