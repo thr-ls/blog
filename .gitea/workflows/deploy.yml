@@ -14,4 +14,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.BLOG_DEPLOY_KEY }}
-          script: ls -al
+          script: |
+            git -C /root/blog/ pull
+            mv /root/blog/www/* /var/www/blog/ 
