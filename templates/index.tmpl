@@ -35,7 +35,7 @@
     <div class="offset-by-one ten columns">
       {{$l := len .}}
     
-       <p style="text-align: center;">Sometimes I write and post whatever captures my interest. </p>
+       <p style="text-align: center;">Sometimes I write and <s>post</s> whatever captures my interest. </p>
         {{range $i, $e := .}}
           {{if not $e.IsPage}}
             {{if even $i}}<div class="row">{{end}}
