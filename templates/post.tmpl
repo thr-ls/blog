@@ -5,19 +5,12 @@
 {{define "content"}}
   <div class="row">
     <div class="offset-by-one ten columns">
-      <h5>{{.Title}}</h5>
       
       {{if not .IsPage}}
+      <h5>{{.Title}}</h5>
       <p><small>{{formatDate .Written}}</small></p>
       {{end}}
       
-       <p>
-        <em>
-          {{range .Tags}}
-            <a href="/tags/{{. | slug}}.html" title="Posts Tagged {{.}}">{{.}}</a>&nbsp;
-          {{end}}
-        </em>
-      </p>
       {{.Content | html}}
     </div>
   </div>
