@@ -6,12 +6,12 @@ on:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest  # Make sure to specify the runner environment
     steps:
-
       - name: executing remote ssh commands using ssh key
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
-        key: ${{ secrets.BLOG_DEPLOY_KEY }}
-        script: ls -al
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.BLOG_DEPLOY_KEY }}
+          script: ls -al
