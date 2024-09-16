@@ -1,0 +1,14 @@
+name: Deploy Blog
+
+on:
+  push:
+    branches: [ main ]  # Adjust this to your main branch name
+
+jobs:
+  - name: executing remote ssh commands using ssh key
+  uses: appleboy/ssh-action@v1.0.3
+  with:
+    host: ${{ secrets.HOST }}
+    username: ${{ secrets.USER }}
+    key: ${{ secrets.BLOG_DEPLOY_KEY }}
+    script: ls -al
