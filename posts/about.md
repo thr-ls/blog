@@ -15,9 +15,8 @@ I fell in love with programming in college and have been passionate about writin
 I moved to Appleton, WI in 2019, and where I have been functioning thanks to 300-600ml of good coffee every day.
 
 You can find me on:
-<a href="https://mastodon.social/@thrls" rel="me nofollow">
-Mastodon
-</a>, <a href="https://github.com/thr-ls/" rel="me nofollow">Github</a> or send an email to [hi @ thrls . com](mailto:).
+[Mastodon](https://mastodon.social/@thrls),
+[Gitea](https://gitea.thrls.net/) or send an email to [hi @ thrls . com](mailto:).
 
 <small>This site was built using my [fork](https://github.com/mirovarga/litepub) of [litepub](https://github.com/mirovarga/litepub) **+**
-gitea actions for automatic deploys.</small>
+gitea actions.</small>
