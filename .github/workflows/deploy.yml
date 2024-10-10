@@ -16,4 +16,4 @@ jobs:
           key: ${{ secrets.BLOG_DEPLOY_KEY }}
           script: |
             git -C /root/blog/ pull
-            mv /root/blog/www/* /var/www/blog/ 
+            cp /root/blog/www/* /var/www/blog/ 
