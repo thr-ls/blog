@@ -16,7 +16,6 @@ I moved to Appleton, WI in 2019, and where I have been functioning thanks to 300
 
 You can find me on:
 [Mastodon](https://mastodon.social/@thrls),
-[Gitea](https://gitea.thrls.net/thr-ls) or send an email to [hi @ thrls . com](mailto:).
+[Github](https://github.com/thr-ls) or send an email to [hi @ thrls . com](mailto:).
 
-<small>This site was built using my [fork](https://github.com/mirovarga/litepub) of [litepub](https://github.com/mirovarga/litepub) **+**
-gitea actions.</small>
+<small>This site was built using [litepub](https://github.com/mirovarga/litepub).</small>
